@@ -11,6 +11,9 @@ folder2 = r"C:\Users\Anu\Triassic solutions\watching program\folder2"
 
 
 class Folder1(Thread):
+    """
+    Monitor folder 1 using threading
+    """
     def __init__(self, folder):
         super(Folder1, self).__init__()
         self.folder = folder
@@ -30,6 +33,9 @@ class Folder1(Thread):
 
 
 class Folder2(Thread):
+    """
+        Monitor folder 2 using threading
+    """
     def __init__(self, folder):
         super(Folder2, self).__init__()
         self.folder = folder
@@ -57,5 +63,7 @@ object2.start()
 
 object1.join()
 object2.join()
+
+
 if __name__ == "__main__":
     print('bye')
